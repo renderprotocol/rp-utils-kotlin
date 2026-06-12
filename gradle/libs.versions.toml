@@ -1,13 +1,13 @@
 [versions]
-agp = "8.5.2"
-kotlin = "2.3.21"
-coreKtx = "1.18.0"
+agp = "9.2.1"
+coreKtx = "1.19.0"
 junit = "4.13.2"
+rpGeneratedKotlin = "main-SNAPSHOT"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
+rp-generated-kotlin = { module = "com.github.renderprotocol:rp-generated-kotlin", version.ref = "rpGeneratedKotlin" }
 
 [plugins]
 android-library = { id = "com.android.library", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
