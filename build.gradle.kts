@@ -1,6 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlinAndroid)
 }
 
 android {
@@ -19,11 +19,15 @@ android {
     }
 }
 
+kotlin {
+    jvmToolchain(17)
+}
+
 dependencies {
     implementation(libs.androidx.core.ktx)
     
     // Pulls directly from the GitHub repository via JitPack
-    implementation("com.github.renderprotocol:rp-generated-kotlin:main-SNAPSHOT")
+    implementation(libs.rp.generated.kotlin)
 
     testImplementation(libs.junit)
 }
